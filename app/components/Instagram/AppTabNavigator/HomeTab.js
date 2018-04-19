@@ -1,15 +1,37 @@
 import React, {Component} from 'react'
-import {Text, View, Navigator, Button} from 'react-native'
+import {Text, View, Navigator, Button, StyleSheet} from 'react-native'
 
+import {Icon, Container, Content} from 'native-base'
+import CardComponent from '../CardComponent';
 
 class HomeTab extends Component {
+
+  static navigationOptions = {
+    tabBarIcon:({tintColor}) => (
+      <Icon name="ios-home" style={{ color: tintColor }} />
+    )
+  }
+
+
   render(){
     return(
-     <View>
-       <Text>HomeTab</Text>
-     </View> 
+      <Container style={styles.container}>
+        <Content>
+          <CardComponent likes='100' image='gundam.jpg'/>
+          <CardComponent likes='500' image='gundam.jpg'/>
+          <CardComponent likes='1' image='gundam.jpg'/>
+          <CardComponent likes='123' image='gundam.jpg'/>
+        </Content>
+      </Container>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: 'white'
+  }
+})
 
 export default HomeTab
