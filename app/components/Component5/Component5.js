@@ -1,21 +1,15 @@
 import React, {Component} from 'react'
 import {AppRegistry, Text, View, Button} from 'react-native'
-import {StackNavigator,} from 'react-navigation';
 
-import LoginScreen from './LoginScreen'
-import HomeScreen from './HomeScreen'
 
-export default class HomeScreen extends React.Component {
+class Component5 extends React.Component {
     render() {
       return (
-        <AppNavigator /> 
+        <Text>Porgressbar</Text>
       );
     }
 }
 
-const AppNavigator =  StackNavigator({
-  LoginScreen: { screen: LoginScreen },
-  // HomeScreen: { screen: HomeScreen }
-})
+export default Component5
 
 // AppRegistry.registerComponent('Component5', () => Component5)
