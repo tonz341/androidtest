@@ -15,7 +15,7 @@ class MainScreen extends Component {
   static navigationOptions = {
     headerLeft: <Icon name="ios-camera-outline" 
     style={{ paddingLeft: 10 }}/>,
-    title: "Instagram",
+    title: "Fake Instagram",
     headerRight: <Icon name="ios-send-outline" 
     style={{ paddingRight: 10 }}/>
   }

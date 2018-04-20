@@ -12,13 +12,13 @@ export default class CardComponent extends Component {
                 <Left>
                     <Thumbnail source={require('../assets/me.jpg')} />
                     <Body>
-                        <Text>Varun</Text>
-                        <Text note>Jan 15, 2018</Text>
+                        <Text>{this.props.data.source.name}</Text>
+                        <Text note>{this.props.data.publishedAt}</Text>
                     </Body>
                 </Left>
             </CardItem>
             <CardItem>
-                <Image source={require('../assets/gundam.jpg')} style={{height:200, width: null, flex: 1}} />
+                <Image source={{uri: this.props.data.urlToImage}} style={{height:200, width: null, flex: 1}} />
             </CardItem>
             <CardItem style={{height:20}}>
                 <Left>
@@ -34,12 +34,12 @@ export default class CardComponent extends Component {
                 </Left>
             </CardItem>
             <CardItem style={{height:20}}>
-                <Text>{this.props.likes} likes</Text>
+                <Text>143 likes</Text>
             </CardItem>
             <CardItem>
                 <Text>
-                    <Text style={{ fontWeight:"900" }}>{this.props.name} </Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <Text style={{ fontWeight:"900" }}>{this.props.data.name} </Text>
+                    {this.props.data.description}
                 </Text>
             </CardItem>
         </Card>
